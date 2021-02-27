@@ -16,7 +16,7 @@ es decir que de como resultado True o False, y de esa manera ejecuta la parte de
 <= : menor igual que
 
 
-6.
+6.TRUE O FALSE
 
 7. Las Expresiones lógicas son aquellas que pueden tomar uno de dos valores, verdadero o falso.
 
@@ -25,7 +25,7 @@ es decir que de como resultado True o False, y de esa manera ejecuta la parte de
 ||,|=o
 !=No
 
-9.
+9.EL DE LA NEGACIÓN
 
 10.El switch es una declaración de selección, donde evalua una variable y va comparando con un listado de candidatos 
 para asi ejecutar las intruciones que contenga ese bloque. 
