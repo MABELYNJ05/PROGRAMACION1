@@ -1,0 +1,38 @@
+1. Las estructuras selectivas son las que nos permiten alterar el orden de la ejecución de las instrucciones.
+
+2. Se ejecuta al momento que debemos tomar decisiones, ya que esta sentencia va evaluando básicamente una operacion lógica, 
+es decir que de como resultado True o False, y de esa manera ejecuta la parte de código siguiente siempre y cuando el resultado sea verdadero.
+
+3. La condión que se debe de cumplir para ejecutar el bloque de instrucciones.
+
+4. Son simbolos que se usan para comparar dos valore.
+
+5.
+== : igual que
+!= : diferente a
+> : mayor que
+< : menor que
+>= : mayor igual que
+<= : menor igual que
+
+
+6.
+
+7. Las Expresiones lógicas son aquellas que pueden tomar uno de dos valores, verdadero o falso.
+
+8. 
+&&,&=Y
+||,|=o
+!=No
+
+9.
+
+10.El switch es una declaración de selección, donde evalua una variable y va comparando con un listado de candidatos 
+para asi ejecutar las intruciones que contenga ese bloque. 
+
+11.
+
+12.Para definir un caso se escribe "case" y el mensaje a evaluar seguido de dos puntos, luego las intrucciones 
+a ejecutar si en dado caso coincide con la variable que se esta evaluando, luego utilizamos la sentencia break; el cual
+hace que una vez verificado que se cumple una opción dentro del switch, se salga del mismo y se continúe la ejecución
+ en la siguiente instrucción después del switch.
