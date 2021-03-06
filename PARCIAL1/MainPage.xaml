@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PARCIALPROGRAFINAL.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+            <Label Text="BIENVENIDO A ADIVINANDO" HorizontalTextAlignment="Center" TextColor="Green" FontSize="16"/>
+        </Frame>
+        <Label Text="Hola! Sigue los siguientes pasos" HorizontalTextAlignment="Center" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Piensa en un numero " HorizontalTextAlignment="Center" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Ahora multiplica ese numero por 2 " HorizontalTextAlignment="Center" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Sumale 8 al resultado" HorizontalTextAlignment="Center" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Ahora multiplicalo por 5" HorizontalTextAlignment="Center" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Ahora ingresa el resultado obtenido " HorizontalTextAlignment="Center" FontSize="Title" Padding="30,10,30,10"/>
+        <Entry Placeholder="RESULTADO" x:Name="resultadoUsuario"/>
+        <Entry Placeholder="EL NUMERO QUE PENSASTE ES: " x:Name="resultadoNumero"/>
+        <Button Text="ADIVINA MI RESULTADO" Clicked="Button_Clicked"/>
+        
+
+
+
+    </StackLayout>
+
+</ContentPage>
