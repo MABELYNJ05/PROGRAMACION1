@@ -1,0 +1,30 @@
+C:\Users\cmabe\source\repos\Arreglos_POO\bin\Debug\Arreglos_POO.exe.config
+C:\Users\cmabe\source\repos\Arreglos_POO\bin\Debug\Arreglos_POO.exe
+C:\Users\cmabe\source\repos\Arreglos_POO\bin\Debug\Arreglos_POO.pdb
+C:\Users\cmabe\source\repos\Arreglos_POO\obj\Debug\Arreglos_POO.csprojAssemblyReference.cache
+C:\Users\cmabe\source\repos\Arreglos_POO\obj\Debug\Arreglos_POO.Form1.resources
+C:\Users\cmabe\source\repos\Arreglos_POO\obj\Debug\Arreglos_POO.Properties.Resources.resources
+C:\Users\cmabe\source\repos\Arreglos_POO\obj\Debug\Arreglos_POO.csproj.GenerateResource.cache
+C:\Users\cmabe\source\repos\Arreglos_POO\obj\Debug\Arreglos_POO.csproj.CoreCompileInputs.cache
+C:\Users\cmabe\source\repos\Arreglos_POO\obj\Debug\Arreglos_POO.exe
+C:\Users\cmabe\source\repos\Arreglos_POO\obj\Debug\Arreglos_POO.pdb
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\bin\Debug\Arreglos_POO.exe.config
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\bin\Debug\Arreglos_POO.exe
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\bin\Debug\Arreglos_POO.pdb
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\obj\Debug\Arreglos_POO.csprojAssemblyReference.cache
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\obj\Debug\Arreglos_POO.Form1.resources
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\obj\Debug\Arreglos_POO.Properties.Resources.resources
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\obj\Debug\Arreglos_POO.csproj.GenerateResource.cache
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\obj\Debug\Arreglos_POO.csproj.CoreCompileInputs.cache
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\obj\Debug\Arreglos_POO.exe
+D:\Dowloads Chrome\Arreglos_POO (1)\Arreglos_POO\obj\Debug\Arreglos_POO.pdb
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\bin\Debug\Arreglos_POO.exe.config
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\bin\Debug\Arreglos_POO.exe
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\bin\Debug\Arreglos_POO.pdb
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\obj\Debug\Arreglos_POO.csprojAssemblyReference.cache
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\obj\Debug\Arreglos_POO.Form1.resources
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\obj\Debug\Arreglos_POO.Properties.Resources.resources
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\obj\Debug\Arreglos_POO.csproj.GenerateResource.cache
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\obj\Debug\Arreglos_POO.csproj.CoreCompileInputs.cache
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\obj\Debug\Arreglos_POO.exe
+C:\Users\cmabe\OneDrive\Escritorio\Arreglos_POO\obj\Debug\Arreglos_POO.pdb
