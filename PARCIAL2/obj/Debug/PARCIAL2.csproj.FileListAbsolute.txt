@@ -1,0 +1,10 @@
+C:\Users\cmabe\source\repos\PARCIAL2\bin\Debug\PARCIAL2.exe.config
+C:\Users\cmabe\source\repos\PARCIAL2\bin\Debug\PARCIAL2.exe
+C:\Users\cmabe\source\repos\PARCIAL2\bin\Debug\PARCIAL2.pdb
+C:\Users\cmabe\source\repos\PARCIAL2\obj\Debug\PARCIAL2.csprojAssemblyReference.cache
+C:\Users\cmabe\source\repos\PARCIAL2\obj\Debug\PARCIAL2.Form1.resources
+C:\Users\cmabe\source\repos\PARCIAL2\obj\Debug\PARCIAL2.Properties.Resources.resources
+C:\Users\cmabe\source\repos\PARCIAL2\obj\Debug\PARCIAL2.csproj.GenerateResource.cache
+C:\Users\cmabe\source\repos\PARCIAL2\obj\Debug\PARCIAL2.csproj.CoreCompileInputs.cache
+C:\Users\cmabe\source\repos\PARCIAL2\obj\Debug\PARCIAL2.exe
+C:\Users\cmabe\source\repos\PARCIAL2\obj\Debug\PARCIAL2.pdb
