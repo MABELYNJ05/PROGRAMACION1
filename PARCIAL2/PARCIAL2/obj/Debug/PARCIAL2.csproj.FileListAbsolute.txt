@@ -18,3 +18,13 @@ C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\obj\Debug\PARCI
 C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\bin\Debug\PARCIAL2.exe.config
 C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\bin\Debug\PARCIAL2.exe
 C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\bin\Debug\PARCIAL2.pdb
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\obj\Debug\PARCIAL2.csprojAssemblyReference.cache
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\obj\Debug\PARCIAL2.Form1.resources
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\obj\Debug\PARCIAL2.Properties.Resources.resources
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\obj\Debug\PARCIAL2.csproj.GenerateResource.cache
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\obj\Debug\PARCIAL2.csproj.CoreCompileInputs.cache
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\obj\Debug\PARCIAL2.exe
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\obj\Debug\PARCIAL2.pdb
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\bin\Debug\PARCIAL2.exe.config
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\bin\Debug\PARCIAL2.exe
+D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\bin\Debug\PARCIAL2.pdb

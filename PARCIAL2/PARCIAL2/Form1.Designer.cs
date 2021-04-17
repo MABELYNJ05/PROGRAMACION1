@@ -48,14 +48,17 @@ namespace PARCIAL2
             this.buttonPromedio = new System.Windows.Forms.Button();
             this.textBoxPromedioxSeccion = new System.Windows.Forms.TextBox();
             this.buttonPGS = new System.Windows.Forms.Button();
-            this.textBoxPGS = new System.Windows.Forms.TextBox();
+            this.buttonPGAlumnos = new System.Windows.Forms.Button();
+            this.lstBoxPGS = new System.Windows.Forms.ListBox();
+            this.btnSumaAlumno = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCargar
             // 
-            this.buttonCargar.Location = new System.Drawing.Point(2, 11);
+            this.buttonCargar.Location = new System.Drawing.Point(3, 14);
+            this.buttonCargar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCargar.Name = "buttonCargar";
-            this.buttonCargar.Size = new System.Drawing.Size(106, 59);
+            this.buttonCargar.Size = new System.Drawing.Size(141, 73);
             this.buttonCargar.TabIndex = 0;
             this.buttonCargar.Text = "Cargar Datos";
             this.buttonCargar.UseVisualStyleBackColor = true;
@@ -63,9 +66,10 @@ namespace PARCIAL2
             // 
             // buttonNombres
             // 
-            this.buttonNombres.Location = new System.Drawing.Point(2, 76);
+            this.buttonNombres.Location = new System.Drawing.Point(3, 94);
+            this.buttonNombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonNombres.Name = "buttonNombres";
-            this.buttonNombres.Size = new System.Drawing.Size(106, 34);
+            this.buttonNombres.Size = new System.Drawing.Size(141, 42);
             this.buttonNombres.TabIndex = 1;
             this.buttonNombres.Text = "Nombres";
             this.buttonNombres.UseVisualStyleBackColor = true;
@@ -73,9 +77,10 @@ namespace PARCIAL2
             // 
             // buttonParcial1
             // 
-            this.buttonParcial1.Location = new System.Drawing.Point(2, 301);
+            this.buttonParcial1.Location = new System.Drawing.Point(3, 290);
+            this.buttonParcial1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonParcial1.Name = "buttonParcial1";
-            this.buttonParcial1.Size = new System.Drawing.Size(106, 51);
+            this.buttonParcial1.Size = new System.Drawing.Size(141, 63);
             this.buttonParcial1.TabIndex = 2;
             this.buttonParcial1.Text = "Parcial #1";
             this.buttonParcial1.UseVisualStyleBackColor = true;
@@ -83,9 +88,10 @@ namespace PARCIAL2
             // 
             // buttonParcial2
             // 
-            this.buttonParcial2.Location = new System.Drawing.Point(2, 377);
+            this.buttonParcial2.Location = new System.Drawing.Point(3, 361);
+            this.buttonParcial2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonParcial2.Name = "buttonParcial2";
-            this.buttonParcial2.Size = new System.Drawing.Size(106, 53);
+            this.buttonParcial2.Size = new System.Drawing.Size(141, 65);
             this.buttonParcial2.TabIndex = 3;
             this.buttonParcial2.Text = "Parcial #2";
             this.buttonParcial2.UseVisualStyleBackColor = true;
@@ -93,9 +99,10 @@ namespace PARCIAL2
             // 
             // buttonParcial3
             // 
-            this.buttonParcial3.Location = new System.Drawing.Point(2, 456);
+            this.buttonParcial3.Location = new System.Drawing.Point(3, 433);
+            this.buttonParcial3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonParcial3.Name = "buttonParcial3";
-            this.buttonParcial3.Size = new System.Drawing.Size(106, 53);
+            this.buttonParcial3.Size = new System.Drawing.Size(141, 65);
             this.buttonParcial3.TabIndex = 4;
             this.buttonParcial3.Text = "Parcial #3";
             this.buttonParcial3.UseVisualStyleBackColor = true;
@@ -103,9 +110,10 @@ namespace PARCIAL2
             // 
             // buttonMax
             // 
-            this.buttonMax.Location = new System.Drawing.Point(712, 436);
+            this.buttonMax.Location = new System.Drawing.Point(949, 537);
+            this.buttonMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonMax.Name = "buttonMax";
-            this.buttonMax.Size = new System.Drawing.Size(135, 41);
+            this.buttonMax.Size = new System.Drawing.Size(180, 50);
             this.buttonMax.TabIndex = 7;
             this.buttonMax.Text = "Nota Max";
             this.buttonMax.UseVisualStyleBackColor = true;
@@ -113,9 +121,10 @@ namespace PARCIAL2
             // 
             // buttonMin
             // 
-            this.buttonMin.Location = new System.Drawing.Point(712, 483);
+            this.buttonMin.Location = new System.Drawing.Point(949, 594);
+            this.buttonMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonMin.Name = "buttonMin";
-            this.buttonMin.Size = new System.Drawing.Size(135, 41);
+            this.buttonMin.Size = new System.Drawing.Size(180, 50);
             this.buttonMin.TabIndex = 8;
             this.buttonMin.Text = "Nota Min";
             this.buttonMin.UseVisualStyleBackColor = true;
@@ -123,49 +132,57 @@ namespace PARCIAL2
             // 
             // textBoxContenido
             // 
-            this.textBoxContenido.Location = new System.Drawing.Point(124, 11);
+            this.textBoxContenido.Location = new System.Drawing.Point(165, 14);
+            this.textBoxContenido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxContenido.Multiline = true;
             this.textBoxContenido.Name = "textBoxContenido";
-            this.textBoxContenido.Size = new System.Drawing.Size(264, 498);
+            this.textBoxContenido.Size = new System.Drawing.Size(351, 612);
             this.textBoxContenido.TabIndex = 9;
             // 
             // listBoxNombres
             // 
             this.listBoxNombres.FormattingEnabled = true;
-            this.listBoxNombres.Location = new System.Drawing.Point(394, 11);
+            this.listBoxNombres.ItemHeight = 16;
+            this.listBoxNombres.Location = new System.Drawing.Point(525, 14);
+            this.listBoxNombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBoxNombres.Name = "listBoxNombres";
-            this.listBoxNombres.Size = new System.Drawing.Size(276, 290);
+            this.listBoxNombres.Size = new System.Drawing.Size(367, 356);
             this.listBoxNombres.TabIndex = 13;
             // 
             // listBoxResultados
             // 
             this.listBoxResultados.FormattingEnabled = true;
-            this.listBoxResultados.Location = new System.Drawing.Point(923, 11);
+            this.listBoxResultados.ItemHeight = 16;
+            this.listBoxResultados.Location = new System.Drawing.Point(1231, 14);
+            this.listBoxResultados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBoxResultados.Name = "listBoxResultados";
-            this.listBoxResultados.Size = new System.Drawing.Size(67, 290);
+            this.listBoxResultados.Size = new System.Drawing.Size(88, 356);
             this.listBoxResultados.TabIndex = 14;
             // 
             // textBoxMin
             // 
-            this.textBoxMin.Location = new System.Drawing.Point(866, 483);
+            this.textBoxMin.Location = new System.Drawing.Point(1155, 594);
+            this.textBoxMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxMin.Multiline = true;
             this.textBoxMin.Name = "textBoxMin";
-            this.textBoxMin.Size = new System.Drawing.Size(124, 41);
+            this.textBoxMin.Size = new System.Drawing.Size(164, 50);
             this.textBoxMin.TabIndex = 16;
             // 
             // textBoxMax
             // 
-            this.textBoxMax.Location = new System.Drawing.Point(866, 436);
+            this.textBoxMax.Location = new System.Drawing.Point(1155, 537);
+            this.textBoxMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxMax.Multiline = true;
             this.textBoxMax.Name = "textBoxMax";
-            this.textBoxMax.Size = new System.Drawing.Size(124, 41);
+            this.textBoxMax.Size = new System.Drawing.Size(164, 50);
             this.textBoxMax.TabIndex = 17;
             // 
             // buttonSeccionC
             // 
-            this.buttonSeccionC.Location = new System.Drawing.Point(2, 242);
+            this.buttonSeccionC.Location = new System.Drawing.Point(3, 241);
+            this.buttonSeccionC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSeccionC.Name = "buttonSeccionC";
-            this.buttonSeccionC.Size = new System.Drawing.Size(106, 34);
+            this.buttonSeccionC.Size = new System.Drawing.Size(141, 42);
             this.buttonSeccionC.TabIndex = 18;
             this.buttonSeccionC.Text = "Sección C";
             this.buttonSeccionC.UseVisualStyleBackColor = true;
@@ -173,9 +190,10 @@ namespace PARCIAL2
             // 
             // buttonSeccionB
             // 
-            this.buttonSeccionB.Location = new System.Drawing.Point(2, 185);
+            this.buttonSeccionB.Location = new System.Drawing.Point(3, 192);
+            this.buttonSeccionB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSeccionB.Name = "buttonSeccionB";
-            this.buttonSeccionB.Size = new System.Drawing.Size(106, 34);
+            this.buttonSeccionB.Size = new System.Drawing.Size(141, 42);
             this.buttonSeccionB.TabIndex = 19;
             this.buttonSeccionB.Text = "Sección B";
             this.buttonSeccionB.UseVisualStyleBackColor = true;
@@ -183,9 +201,10 @@ namespace PARCIAL2
             // 
             // buttonSeccionA
             // 
-            this.buttonSeccionA.Location = new System.Drawing.Point(2, 129);
+            this.buttonSeccionA.Location = new System.Drawing.Point(3, 143);
+            this.buttonSeccionA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSeccionA.Name = "buttonSeccionA";
-            this.buttonSeccionA.Size = new System.Drawing.Size(106, 34);
+            this.buttonSeccionA.Size = new System.Drawing.Size(141, 42);
             this.buttonSeccionA.TabIndex = 20;
             this.buttonSeccionA.Text = "Sección A";
             this.buttonSeccionA.UseVisualStyleBackColor = true;
@@ -194,16 +213,19 @@ namespace PARCIAL2
             // listBoxSección
             // 
             this.listBoxSección.FormattingEnabled = true;
-            this.listBoxSección.Location = new System.Drawing.Point(676, 12);
+            this.listBoxSección.ItemHeight = 16;
+            this.listBoxSección.Location = new System.Drawing.Point(901, 15);
+            this.listBoxSección.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBoxSección.Name = "listBoxSección";
-            this.listBoxSección.Size = new System.Drawing.Size(241, 290);
+            this.listBoxSección.Size = new System.Drawing.Size(320, 356);
             this.listBoxSección.TabIndex = 21;
             // 
             // buttonPromedio
             // 
-            this.buttonPromedio.Location = new System.Drawing.Point(712, 389);
+            this.buttonPromedio.Location = new System.Drawing.Point(949, 479);
+            this.buttonPromedio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPromedio.Name = "buttonPromedio";
-            this.buttonPromedio.Size = new System.Drawing.Size(135, 41);
+            this.buttonPromedio.Size = new System.Drawing.Size(180, 50);
             this.buttonPromedio.TabIndex = 6;
             this.buttonPromedio.Text = "Promedio por Sección";
             this.buttonPromedio.UseVisualStyleBackColor = true;
@@ -211,36 +233,62 @@ namespace PARCIAL2
             // 
             // textBoxPromedioxSeccion
             // 
-            this.textBoxPromedioxSeccion.Location = new System.Drawing.Point(866, 389);
+            this.textBoxPromedioxSeccion.Location = new System.Drawing.Point(1155, 479);
+            this.textBoxPromedioxSeccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPromedioxSeccion.Multiline = true;
             this.textBoxPromedioxSeccion.Name = "textBoxPromedioxSeccion";
-            this.textBoxPromedioxSeccion.Size = new System.Drawing.Size(124, 41);
+            this.textBoxPromedioxSeccion.Size = new System.Drawing.Size(164, 50);
             this.textBoxPromedioxSeccion.TabIndex = 15;
             // 
             // buttonPGS
             // 
-            this.buttonPGS.Location = new System.Drawing.Point(491, 307);
+            this.buttonPGS.Location = new System.Drawing.Point(556, 378);
+            this.buttonPGS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPGS.Name = "buttonPGS";
-            this.buttonPGS.Size = new System.Drawing.Size(135, 41);
+            this.buttonPGS.Size = new System.Drawing.Size(180, 50);
             this.buttonPGS.TabIndex = 22;
             this.buttonPGS.Text = "Promedios Generales por Sección";
             this.buttonPGS.UseVisualStyleBackColor = true;
             this.buttonPGS.Click += new System.EventHandler(this.buttonPGS_Click);
             // 
-            // textBoxPGS
+            // buttonPGAlumnos
             // 
-            this.textBoxPGS.Location = new System.Drawing.Point(394, 354);
-            this.textBoxPGS.Multiline = true;
-            this.textBoxPGS.Name = "textBoxPGS";
-            this.textBoxPGS.Size = new System.Drawing.Size(312, 170);
-            this.textBoxPGS.TabIndex = 23;
+            this.buttonPGAlumnos.Location = new System.Drawing.Point(3, 506);
+            this.buttonPGAlumnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPGAlumnos.Name = "buttonPGAlumnos";
+            this.buttonPGAlumnos.Size = new System.Drawing.Size(141, 96);
+            this.buttonPGAlumnos.TabIndex = 24;
+            this.buttonPGAlumnos.Text = "Promedio General por Alumnos";
+            this.buttonPGAlumnos.UseVisualStyleBackColor = true;
+            this.buttonPGAlumnos.Click += new System.EventHandler(this.buttonPGAlumnos_Click);
+            // 
+            // lstBoxPGS
+            // 
+            this.lstBoxPGS.FormattingEnabled = true;
+            this.lstBoxPGS.ItemHeight = 16;
+            this.lstBoxPGS.Location = new System.Drawing.Point(542, 458);
+            this.lstBoxPGS.Name = "lstBoxPGS";
+            this.lstBoxPGS.Size = new System.Drawing.Size(376, 180);
+            this.lstBoxPGS.TabIndex = 25;
+            // 
+            // btnSumaAlumno
+            // 
+            this.btnSumaAlumno.Location = new System.Drawing.Point(743, 380);
+            this.btnSumaAlumno.Name = "btnSumaAlumno";
+            this.btnSumaAlumno.Size = new System.Drawing.Size(156, 48);
+            this.btnSumaAlumno.TabIndex = 26;
+            this.btnSumaAlumno.Text = "Nota Final Por Cada Alumno";
+            this.btnSumaAlumno.UseVisualStyleBackColor = true;
+            this.btnSumaAlumno.Click += new System.EventHandler(this.btnSumaAlumno_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 535);
-            this.Controls.Add(this.textBoxPGS);
+            this.ClientSize = new System.Drawing.Size(1336, 658);
+            this.Controls.Add(this.btnSumaAlumno);
+            this.Controls.Add(this.lstBoxPGS);
+            this.Controls.Add(this.buttonPGAlumnos);
             this.Controls.Add(this.buttonPGS);
             this.Controls.Add(this.listBoxSección);
             this.Controls.Add(this.buttonSeccionA);
@@ -260,6 +308,7 @@ namespace PARCIAL2
             this.Controls.Add(this.buttonParcial1);
             this.Controls.Add(this.buttonNombres);
             this.Controls.Add(this.buttonCargar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -288,7 +337,9 @@ namespace PARCIAL2
         private System.Windows.Forms.Button buttonPromedio;
         private System.Windows.Forms.TextBox textBoxPromedioxSeccion;
         private System.Windows.Forms.Button buttonPGS;
-        private System.Windows.Forms.TextBox textBoxPGS;
+        private System.Windows.Forms.Button buttonPGAlumnos;
+        private System.Windows.Forms.ListBox lstBoxPGS;
+        private System.Windows.Forms.Button btnSumaAlumno;
     }
 }
 

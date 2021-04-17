@@ -24,7 +24,7 @@ namespace PARCIAL2.CLASES
         /// <param name="columna"></param>
         /// <param name="seccion"></param>
         /// <returns></returns>
-        int promedios_por_seccion(string[,] matriz, int columna_parcial, string seccion);
+        float promedios_por_seccion(string[,] matriz, string seccion);
 
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace PARCIAL2.CLASES
         /// <param name="columna_parcial"></param>
         /// <param name="seccion"></param>
         /// <returns></returns>
-        int promedios_general_seccion(string[,] matriz, int columna_parcial, string seccion);
+        float promedios_general_seccion(string[,] matriz,int columna_parcial, string seccion);
 
 
 

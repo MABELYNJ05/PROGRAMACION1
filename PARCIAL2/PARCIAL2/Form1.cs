@@ -19,25 +19,27 @@ namespace PARCIAL2
         private int[] NotasParcial1;
         private int[] NotasParcial2;
         private int[] NotasParcial3;
+        private string[,] sumaNotas_Alumnos;
         private string[,] AlumnosSeccionA;
         private string[,] AlumnosSeccionB;
-        private string[,] AlumnosSeccionC;
-
+        private string[,] AlumnosSeccionC;      
         private int PromedioParcial1;
         private int PromedioParcial2;
         private int PromedioParcial3;
+        private float promedioTotalSeccionA;
+        private float promedioTotalSeccionB;
+        private float promedioTotalSeccionC;
+        private float PGSAparcial1;
+        private float PGSBparcial1;
+        private float PGSCparcial1;
+        private float PGSAparcial2;
+        private float PGSBparcial2;
+        private float PGSCparcial2;
+        private float PGSAparcial3;
+        private float PGSBparcial3;
+        private float PGSCparcial3;
 
-        private int PGSAparcial1;
-        private int PGSBparcial1;
-        private int PGSCparcial1;
-        private int PGSAparcial2;
-        private int PGSBparcial2;
-        private int PGSCparcial2;
-        private int PGSAparcial3;
-        private int PGSBparcial3;
-        private int PGSCparcial3;
-
-
+        private string[,] promedio_Alumno;
 
 
 
@@ -112,7 +114,6 @@ namespace PARCIAL2
             AlumnosSeccionB = ObjPromedios.Clasificar_Alumnos(ArregloDosDimensiones, "B");
             AlumnosSeccionC = ObjPromedios.Clasificar_Alumnos(ArregloDosDimensiones, "C");
 
-
             PGSAparcial1 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 2, "A");
             PGSBparcial1 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 2, "B");
             PGSCparcial1 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 2, "C");
@@ -127,8 +128,12 @@ namespace PARCIAL2
             PromedioParcial2 = ObjPromedios.promedios_por_parcial(ArregloDosDimensiones,3);
             PromedioParcial3 = ObjPromedios.promedios_por_parcial(ArregloDosDimensiones,4);
 
-            
-
+            sumaNotas_Alumnos = ObjPromedios.sumatoria_general_por_alumno(ArregloDosDimensiones);
+            promedioTotalSeccionA = ObjPromedios.promedios_por_seccion(sumaNotas_Alumnos,"A");
+            promedioTotalSeccionB = ObjPromedios.promedios_por_seccion(sumaNotas_Alumnos, "B");
+            promedioTotalSeccionC = ObjPromedios.promedios_por_seccion(sumaNotas_Alumnos, "C");
+            promedio_Alumno = ObjPromedios.PromedioTotalPorAlumno(sumaNotas_Alumnos);
+          
 
 
         }
@@ -181,6 +186,11 @@ namespace PARCIAL2
                     break;
             }
 
+            lstBoxPGS.Items.Clear();
+            lstBoxPGS.Items.Add("Seccion A=" + promedioTotalSeccionA);
+            lstBoxPGS.Items.Add("Seccion B=" + promedioTotalSeccionB);
+            lstBoxPGS.Items.Add("Seccion C=" + promedioTotalSeccionC);
+
 
         }
 
@@ -228,15 +238,16 @@ namespace PARCIAL2
 
         private void buttonPGS_Click(object sender, EventArgs e)
         {
-            textBoxPGS.Text = "Promedio General Seccion 'A', parcial1= " + PGSAparcial1.ToString() +
-                "Promedio General Seccion 'B', parcial1= " + PGSBparcial1.ToString() +
-                "Promedio General Seccion 'C', parcial1= " + PGSCparcial1.ToString() +
-                "Promedio General Seccion 'A', parcial2= " + PGSAparcial2.ToString() +
-                "Promedio General Seccion 'B', parcial2= " + PGSBparcial2.ToString() +
-                "Promedio General Seccion 'C', parcial2= " + PGSCparcial2.ToString() +
-                "Promedio General Seccion 'A', parcial3= " + PGSAparcial3.ToString() +
-                "Promedio General Seccion 'B', parcial3= " + PGSBparcial3.ToString() +
-                "Promedio General Seccion 'C', parcial2= " + PGSCparcial3.ToString();
+            lstBoxPGS.Items.Clear();
+            lstBoxPGS.Items.Add("Promedio Seccion 'A', parcial1= " + PGSAparcial1.ToString());
+            lstBoxPGS.Items.Add( "Promedio Seccion 'B', parcial1= " + PGSBparcial1.ToString());
+            lstBoxPGS.Items.Add("Promedio Seccion 'C', parcial1= " + PGSCparcial1.ToString());
+            lstBoxPGS.Items.Add("Promedio Seccion 'A', parcial2= " + PGSAparcial2.ToString());
+            lstBoxPGS.Items.Add("Promedio Seccion 'B', parcial2= " + PGSBparcial2.ToString());
+            lstBoxPGS.Items.Add("Promedio Seccion 'C', parcial2= " + PGSCparcial2.ToString());
+            lstBoxPGS.Items.Add("Promedio Seccion 'A', parcial3= " + PGSAparcial3.ToString());
+            lstBoxPGS.Items.Add("Promedio Seccion 'B', parcial3= " + PGSBparcial3.ToString());
+            lstBoxPGS.Items.Add("Promedio Seccion 'C', parcial2= " + PGSCparcial3.ToString());
 
 
         }
@@ -256,6 +267,33 @@ namespace PARCIAL2
             for (int i = 0; i < AlumnosSeccionC.GetLength(0); i++)
             {
                 listBoxSección.Items.Add(AlumnosSeccionC[i, 2]);
+            }
+        }
+
+        private void buttonPGAlumnos_Click(object sender, EventArgs e)
+        {
+            lstBoxPGS.Items.Clear();
+            for(int i = 0; i < promedio_Alumno.GetLength(0); i++)
+            {
+                //si es distinto a nulo se ejecuta el if y inserta en el listbox
+                if (promedio_Alumno[i, 0] != null)
+                {
+                    lstBoxPGS.Items.Add(promedio_Alumno[i, 0] + " :" + promedio_Alumno[i, 1]);
+                }
+            }
+
+        }
+
+        private void btnSumaAlumno_Click(object sender, EventArgs e)
+        {
+            lstBoxPGS.Items.Clear();
+            for(int i=0;i < sumaNotas_Alumnos.GetLength(0); i++)
+            {
+                //solo se imprimiran las posiciones que no tengan un valor nulo
+                if (sumaNotas_Alumnos[i, 0] != null)
+                {
+                    lstBoxPGS.Items.Add(sumaNotas_Alumnos[i, 0] +  "Total:" + sumaNotas_Alumnos[i, 1]);
+                }
             }
         }
     }
