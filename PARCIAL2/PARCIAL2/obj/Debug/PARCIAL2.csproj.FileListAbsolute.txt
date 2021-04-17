@@ -28,3 +28,13 @@ D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\obj\Debug\PARCIAL2.pdb
 D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\bin\Debug\PARCIAL2.exe.config
 D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\bin\Debug\PARCIAL2.exe
 D:\Dowloads Chrome\PARCIAL2 (1)\PARCIAL2\bin\Debug\PARCIAL2.pdb
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\bin\Debug\PARCIAL2.exe.config
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\bin\Debug\PARCIAL2.exe
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\bin\Debug\PARCIAL2.pdb
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\obj\Debug\PARCIAL2.csprojAssemblyReference.cache
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\obj\Debug\PARCIAL2.Form1.resources
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\obj\Debug\PARCIAL2.Properties.Resources.resources
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\obj\Debug\PARCIAL2.csproj.GenerateResource.cache
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\obj\Debug\PARCIAL2.csproj.CoreCompileInputs.cache
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\obj\Debug\PARCIAL2.exe
+C:\Users\cmabe\OneDrive\Documentos\GitHub\PROGRAMACION1\PARCIAL2\PARCIAL2\obj\Debug\PARCIAL2.pdb

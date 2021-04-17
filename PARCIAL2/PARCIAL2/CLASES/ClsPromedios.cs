@@ -109,7 +109,6 @@ namespace PARCIAL2.CLASES
               for(int i = 1;i<matriz.GetLength(0); i++)
               {
                 //quitamos la columna de las secciones con getlength(1)-1
-                //inicializamos en 1 el iterador para omitir la columna de los nombres y la del numero
                 for (int j = 2;j< matriz.GetLength(1)-1; j++) 
                 {
                     try
