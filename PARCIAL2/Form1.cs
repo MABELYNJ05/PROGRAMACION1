@@ -23,9 +23,25 @@ namespace PARCIAL2
         private string[,] AlumnosSeccionB;
         private string[,] AlumnosSeccionC;
 
-        private int Promedio1;
-        private int Promedio2;
-        private int Promedio3;
+        private int PromedioParcial1;
+        private int PromedioParcial2;
+        private int PromedioParcial3;
+
+        private int PGSAparcial1;
+        private int PGSBparcial1;
+        private int PGSCparcial1;
+        private int PGSAparcial2;
+        private int PGSBparcial2;
+        private int PGSCparcial2;
+        private int PGSAparcial3;
+        private int PGSBparcial3;
+        private int PGSCparcial3;
+
+
+
+
+
+
         private int X = 0;
 
 
@@ -41,7 +57,7 @@ namespace PARCIAL2
             ClsArchivo ar = new ClsArchivo();
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "Selecciona tu archivo Plano";
-            ofd.InitialDirectory = @"C:\Users\cmabe\OneDrive\Escritorio\C# Arreglos";
+            ofd.InitialDirectory = @"C:\Users\cmabe\OneDrive\Escritorio\C# Arreglos\archivoPlano.csv";
             ofd.Filter = "Archivo plano (*.csv)|*.csv";
 
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -84,21 +100,35 @@ namespace PARCIAL2
             for (int i = 1; i < ArregloDosDimensiones.GetLength(0); i++)
             {
                 listBoxNombres.Items.Add(Nombres[i, 1]);
-            }            
-
-            //ClsPromedios ObjPromedios = new ClsPromedios();
-            //AlumnosSeccionA = ObjPromedios.Clasificar_Alumnos(ArregloDosDimensiones, "A");
-            //AlumnosSeccionB = ObjPromedios.Clasificar_Alumnos(ArregloDosDimensiones, "B");
-            //AlumnosSeccionC = ObjPromedios.Clasificar_Alumnos(ArregloDosDimensiones, "C");
-
+            }
 
             ClsArregloNotas ObjArregloNotas = new ClsArregloNotas();
             NotasParcial1 = ObjArregloNotas.MetodoBurbujaEnteros(ArregloDosDimensiones, 2);
             NotasParcial2 = ObjArregloNotas.MetodoBurbujaEnteros(ArregloDosDimensiones, 3);
             NotasParcial3 = ObjArregloNotas.MetodoBurbujaEnteros(ArregloDosDimensiones, 4);
-            Promedio1 = ObjArregloNotas.promedios(NotasParcial1);
-            Promedio2 = ObjArregloNotas.promedios(NotasParcial2);
-            Promedio3 = ObjArregloNotas.promedios(NotasParcial3);
+
+            ClsPromedios ObjPromedios = new ClsPromedios();
+            AlumnosSeccionA = ObjPromedios.Clasificar_Alumnos(ArregloDosDimensiones, "A");
+            AlumnosSeccionB = ObjPromedios.Clasificar_Alumnos(ArregloDosDimensiones, "B");
+            AlumnosSeccionC = ObjPromedios.Clasificar_Alumnos(ArregloDosDimensiones, "C");
+
+
+            PGSAparcial1 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 2, "A");
+            PGSBparcial1 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 2, "B");
+            PGSCparcial1 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 2, "C");
+            PGSAparcial2 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 3, "A");
+            PGSBparcial2 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 3, "B");
+            PGSCparcial2 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 3, "C");
+            PGSAparcial3 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 4, "A");
+            PGSBparcial3 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 4, "B");
+            PGSCparcial3 = ObjPromedios.promedios_general_seccion(ArregloDosDimensiones, 4, "C");            
+
+            PromedioParcial1 = ObjPromedios.promedios_por_parcial(ArregloDosDimensiones,2);
+            PromedioParcial2 = ObjPromedios.promedios_por_parcial(ArregloDosDimensiones,3);
+            PromedioParcial3 = ObjPromedios.promedios_por_parcial(ArregloDosDimensiones,4);
+
+            
+
 
 
         }
@@ -129,7 +159,7 @@ namespace PARCIAL2
         {
             X = 3;
             listBoxResultados.Items.Clear();
-            for (int i = 0; i < ArregloDosDimensiones.GetLength(0); i++)
+            for (int i = 1; i < ArregloDosDimensiones.GetLength(0); i++)
             {
                 listBoxResultados.Items.Add(NotasParcial3[i]);
             }
@@ -141,13 +171,13 @@ namespace PARCIAL2
             switch (X)
             {
                 case 1:
-                    textBoxPromedio.Text = "" + Promedio1.ToString();
+                    textBoxPromedioxSeccion.Text = "" + PromedioParcial1.ToString();
                     break;
                 case 2:
-                    textBoxPromedio.Text = "" + Promedio2.ToString();
+                    textBoxPromedioxSeccion.Text = "" + PromedioParcial2.ToString();
                     break;
                 case 3:
-                    textBoxPromedio.Text = "" + Promedio3.ToString();
+                    textBoxPromedioxSeccion.Text = "" + PromedioParcial3.ToString();
                     break;
             }
 
@@ -190,9 +220,42 @@ namespace PARCIAL2
         private void buttonSeccionA_Click(object sender, EventArgs e)
         {
             listBoxSección.Items.Clear();
-            for (int i = 1; i < AlumnosSeccionA.GetLength(0); i++)
+            for (int i = 0; i < AlumnosSeccionA.GetLength(0); i++)
             {
                 listBoxSección.Items.Add(AlumnosSeccionA[i, 0]);
+            }
+        }
+
+        private void buttonPGS_Click(object sender, EventArgs e)
+        {
+            textBoxPGS.Text = "Promedio General Seccion 'A', parcial1= " + PGSAparcial1.ToString() +
+                "Promedio General Seccion 'B', parcial1= " + PGSBparcial1.ToString() +
+                "Promedio General Seccion 'C', parcial1= " + PGSCparcial1.ToString() +
+                "Promedio General Seccion 'A', parcial2= " + PGSAparcial2.ToString() +
+                "Promedio General Seccion 'B', parcial2= " + PGSBparcial2.ToString() +
+                "Promedio General Seccion 'C', parcial2= " + PGSCparcial2.ToString() +
+                "Promedio General Seccion 'A', parcial3= " + PGSAparcial3.ToString() +
+                "Promedio General Seccion 'B', parcial3= " + PGSBparcial3.ToString() +
+                "Promedio General Seccion 'C', parcial2= " + PGSCparcial3.ToString();
+
+
+        }
+
+        private void buttonSeccionB_Click(object sender, EventArgs e)
+        {
+            listBoxSección.Items.Clear();
+            for (int i = 0; i < AlumnosSeccionB.GetLength(0); i++)
+            {
+                listBoxSección.Items.Add(AlumnosSeccionB[i, 1]);
+            }
+        }
+
+        private void buttonSeccionC_Click(object sender, EventArgs e)
+        {
+            listBoxSección.Items.Clear();
+            for (int i = 0; i < AlumnosSeccionC.GetLength(0); i++)
+            {
+                listBoxSección.Items.Add(AlumnosSeccionC[i, 2]);
             }
         }
     }

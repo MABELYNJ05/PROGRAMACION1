@@ -17,44 +17,80 @@ namespace PARCIAL2.CLASES
 
         public string[,] Clasificar_Alumnos(string[,] matriz, string seccion)
         {
-            string Sec = seccion;
-
+            string[,] AlumnosClasificados = new string[20,3];
+            int contador = 0;
             for (int i = 1; i < matriz.GetLength(0); i++)
             {
-
-
                 if ((seccion == "A") && (seccion == matriz[i, 5]))
                 {
-                    AlumnosClasificados = new string[i, 0];
-                    AlumnosClasificados[i, 0] = matriz[i, 1];
+                    AlumnosClasificados[contador, 0] = matriz[i, 1];
+                    contador++;
 
                 }
-                else if ((seccion == "B") && (seccion == matriz[i, 1]))
+                else if ((seccion == "B") && (seccion == matriz[i, 5]))
                 {
-                    AlumnosClasificados[i, 1] = matriz[i, 1];
-
+                    AlumnosClasificados[contador, 1] = matriz[i, 1];
+                    contador++;
                 }
-                else if ((seccion == "C") && (seccion == matriz[i, 1]))
+                else if ((seccion == "C") && (seccion == matriz[i, 5]))
                 {
-                    AlumnosClasificados[i, 2] = matriz[i, 1];
+                    AlumnosClasificados[contador, 2] = matriz[i, 1];
+                    contador++;
                 }
 
             }
 
             return AlumnosClasificados;
-
-
-
         }
 
         public int promedios_general_seccion(string[,] matriz, int columna_parcial, string seccion)
         {
-            throw new NotImplementedException();
+            int columna = columna_parcial;
+            int acumulador = 0;
+            int promedio;
+            int totalFilas = matriz.GetLength(0);
+
+
+
+            for (int fila = 1; fila < totalFilas; fila++)
+            {
+                if ((seccion == "A") && (seccion == matriz[fila, 5]))
+                {
+                    acumulador = acumulador + Convert.ToInt32(matriz[fila, columna]);
+
+                }
+                else if ((seccion == "B") && (seccion == matriz[fila, 5]))
+                {
+                    acumulador = acumulador + Convert.ToInt32(matriz[fila, columna]);
+
+                }
+                else if ((seccion == "C") && (seccion == matriz[fila, 5]))
+                {
+                    acumulador = acumulador + Convert.ToInt32(matriz[fila, columna]);
+
+                }
+
+            }
+
+            promedio = acumulador / (totalFilas - 1);
+            return promedio;            
+
         }
 
         public int promedios_por_parcial(string[,] matriz, int columna_parcial)
         {
-            throw new NotImplementedException();
+            int columna = columna_parcial;
+            int acumulador = 0;
+            int promedio;
+            int totalFilas = matriz.GetLength(0);
+
+            for (int fila = 1; fila < totalFilas; fila++)
+            {
+                acumulador = acumulador + Convert.ToInt32(matriz[fila, columna]);
+
+            }
+            promedio = acumulador / (totalFilas - 1);
+            return promedio;
 
         }
 
@@ -66,7 +102,7 @@ namespace PARCIAL2.CLASES
 
         public string[,] sumatoria_general_por_alumno(string[,] matriz)
         {
-            throw new NotImplementedException();
+
 
         }
     }

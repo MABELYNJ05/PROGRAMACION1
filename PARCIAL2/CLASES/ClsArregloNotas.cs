@@ -48,21 +48,6 @@ namespace PARCIAL2.CLASES
 
             return ArregloTemporal;
         }
-
-
-        public int promedios(int[] arreglo)
-        {
-            int acumulador = 0;
-            int promedio;
-            int totalFilas = arreglo.Length;
-
-            for(int fila = 1; fila < totalFilas; fila++)
-            {
-                acumulador = acumulador + arreglo[fila];
-
-            }
-            promedio = acumulador / (totalFilas - 1);
-            return promedio;
-        }
+        
     }
 }
