@@ -33,11 +33,11 @@ namespace ProyectoFinal_WPF
         string dpi;
 
 
-        public string cantidadMesAño;
+        public int cantidadMesAño;
         public string[] alquilarx { get; set; }
         public string[] habitaciones { get; set; }
         public string[] num = new string[5] { "1", "2", "3", "4", "5" };
-        public int opcionHabitaciones;
+        public string opcionHabitaciones;
         public string opcionAlquilarx;
         public string nombreCons;
         public int CanHabitacionesCons = 0;
@@ -64,7 +64,7 @@ namespace ProyectoFinal_WPF
             dpi = TexBoxDPI.Text;
             telefono = TexBoxTelefono.Text;
             ClsConexion my = new ClsConexion();
-            DataTable dt = my.consultaTablaDirecta(" insert into dbprogra.tb_proyectof values ("+dpi+",'"+nombre+"',"+telefono+","+opcionHabitaciones+",'"+opcionAlquilarx+"','"+fecha.Value.ToString("yyyy/MM/dd")+"',"+cantidadMesAño+");");            
+            DataTable dt = my.consultaTablaDirecta(" insert into dbprogra.tb_proyectof values ('"+dpi+"','"+nombre+"','"+telefono+"','"+opcionHabitaciones+"','"+opcionAlquilarx+"','"+fecha.Value.ToString("yyyy/MM/dd")+"',"+cantidadMesAño+");");            
             TexBoxNombre.Clear();
             TexBoxDPI.Clear();
             TexBoxTelefono.Clear();
@@ -184,62 +184,28 @@ namespace ProyectoFinal_WPF
                 datoS = ($"{x[0]},{x[1]},{x[2]},{x[3]},{x[4]},{x[5]},{x[6]}\n");
             }
 
+            ListDatos.ItemsSource = datoS;
+
             TexBoxNombreCons.Clear();
 
-            ListDatos.ItemsSource = datoS;
 
 
         }
-
-        private void ButtonBsxHabit_Click(object sender, RoutedEventArgs e)
-        {
-            int CanHabit = Convert.ToInt32(ComboBoxHabitCons.SelectedItem);
-            ClsConexion cn = new ClsConexion();
-            DataTable dt = cn.consultaTablaDirecta("SELECT * FROM dbprogra.tb_proyectof where Habitaciones = "+CanHabit+"");
-
-            string datoS = "";
-
-            foreach (DataRow x in dt.Rows)
-            {
-                datoS = ($"{x[0]},{x[1]},{x[2]},{x[3]},{x[4]},{x[5]},{x[6]}\n");
-            }
-
-            ListDatos.ItemsSource = datoS;
-
-
-        }
-
-        private void ButtonBsxAlq_Click(object sender, RoutedEventArgs e)
-        {
-            string tipoAlq = Convert.ToString(ComboConsAql.SelectedItem);
-            ClsConexion cn = new ClsConexion();
-            DataTable dt = cn.consultaTablaDirecta("SELECT * FROM dbprogra.tb_proyectof where Tipo_Alquiler ='"+tipoAlq+"'");
-
-            string datoS = "";
-
-            foreach (DataRow x in dt.Rows)
-            {
-                datoS += ($"{x[0]},{x[1]},{x[2]},{x[3]},{x[4]},{x[5]},{x[6]}\n");
-            }
-
-            ListDatos.ItemsSource = datoS;
-        }
+                       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ClsConexion cn = new ClsConexion();
+            nombreModificar = ModificarNom.Text;
+
             opcionModificar = Convert.ToString(ModificarAql.SelectedItem);
-            DataTable dt = cn.consultaTablaDirecta("UPDATE dbprogra.tb_proyectof SET Tipo_Alquiler='" + opcionModificar + "' WHERE UPPER (Nombre) like('%"+nombreModificar+"%')");
+            DataTable dt = cn.consultaTablaDirecta("UPDATE dbprogra.tb_proyectof SET Tipo_Alquiler='" + opcionModificar + "' WHERE UPPER (Nombre) like('%"+nombreModificar+"%');");
             ModificarNom.Clear();
             ButtonAlqActual.Content = "ALQUILER ACTUAL";
         }
 
         private void ButtonAlqActual_Click(object sender, RoutedEventArgs e)
-        {
-            nombreModificar = ModificarNom.Text;
-            ClsConexion cn = new ClsConexion();
-            DataTable nm = cn.consultaTablaDirecta("SELECT Tipo_Alquiler FROM dbprogra.tb_proyectof WHERE UPPER (Nombre) like('%" + nombreModificar + "%')");
-            ButtonAlqActual.Content = "" + nm;
+        {           
             
 
         }
@@ -251,38 +217,9 @@ namespace ProyectoFinal_WPF
 
         private void ButtonSelecHab_Click(object sender, RoutedEventArgs e)
         {
-            cantidadMesAño = cantidadAlq.Text;
-            string opcion = Convert.ToString(ComboboxHabitaciones.SelectedItem);
-            opcionHabitaciones = Convert.ToInt32(opcion);
-
-            switch (opcionHabitaciones)
-            {
-                case 1:
-                    num[4] = "---------";
-                    break;
-
-                case 2:
-                    num[3] = "---------";
-                    break;
-
-                case 3:
-                    num[2] = "---------";
-                    break;
-
-                case 4:
-                    num[1] = "---------";
-                    break;
-
-                case 5:
-                    MessageBox.Show("Estimado usuario, usted a rentado todas nuestras habitaciones, por lo cual obtendrá un 5% de descuento");
-                    Label001.Content = "RENTADO";
-                    Label002.Content = "RENTADO";
-                    Label003.Content = "RENTADO";
-                    Label004.Content = "RENTADO";
-                    Label005.Content = "RENTADO";
-                    break;
-
-            }
+            cantidadMesAño = Convert.ToInt32(cantidadAlq.Text);
+            opcionHabitaciones = Convert.ToString(ComboboxHabitaciones.SelectedItem);
+            cantidadAlq.Clear();
 
         }
     }
